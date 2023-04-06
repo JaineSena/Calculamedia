@@ -1,0 +1,31 @@
+Program calculamedia;
+
+var
+    lerTecla: char;
+    contador: integer;
+    continua: boolean;
+    lerValor: real;
+    soma: real;
+    media: real;
+begin
+    contador:=1;
+    continua:=true;
+    soma:=0;
+    while continua = true do
+    begin
+      write('Digite um nº:');
+      readln(lerValor);
+      soma:=soma+lerValor;
+      write ('Deseja continuar? (S/N)');
+      readln(lerTecla);
+      if (lerTecla = 'N') or (lerTecla = 'n') then
+      begin
+        continua:=false;
+      end;
+      contador:=contador+1;
+    end;
+    
+    media:=soma/contador;
+    write('A media dos ', contador,'valores é ', media:0:2);
+    
+end.
